@@ -3,9 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class GameMAnager : MonoBehaviour
-{
-    public void PlayGame()
+{ 
+    public static int SelectCharacterChoice;
+    
+  
+    public void SelectCharacter(int choice)
     {
-        SceneManager.LoadScene(1);
+        SelectCharacterChoice = choice;
+    }
+    public void SelectLevel(int levelnumber)
+    {
+        SceneManager.LoadScene(levelnumber);
     }
 }
